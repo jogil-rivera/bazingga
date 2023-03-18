@@ -6,6 +6,7 @@ class smugmoney:
 
 
 
+
 p1 = smugmoney('rlandoo loomb')
 print(p1.name)
 
