@@ -4,6 +4,8 @@ class smugmoney:
         def __init__(self, name):
             self.name = name
 
+
+
 p1 = smugmoney('rlandoo loomb')
 print(p1.name)
 
