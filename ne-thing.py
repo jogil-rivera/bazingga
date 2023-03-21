@@ -65,18 +65,38 @@ def whatis(z):
 
 zed = whatis(0)
 
-print('the int: ', zed)
 trundle = str(zed)
 
-print('the str: ', trundle)
-
 maokai = {}
-cr = []
 for i in trundle:
     sh = int(i)
     maokai.setdefault('_', [])
     maokai['_'].append(sh)
 
-cr = [_ for _ in maokai.values()]
-print(cr)
-# print(maokai)
+def nicki(hi):
+    print('next up, recursions ', end = "")
+    for j in maokai.values():
+        for k in j:
+            if k == 0:
+                print('r', end = "")
+            elif k == 1:
+                print('a', end = "")
+            elif k == 2:
+                print('c', end = "")
+            elif k == 3:
+                print('t', end = "")
+            elif k == 4:
+                print('u', end = "")
+            elif k == 5:
+                print('i', end = "")
+            elif k == 6:
+                print('e', end = "")
+            elif k == 7:
+                print('m', end = "")
+            elif k == 8:
+                print('o', end = "")
+            elif k == 9:
+                print('s', end = "")
+            else:
+                None
+nicki(1)
