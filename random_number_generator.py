@@ -33,6 +33,7 @@ print(random_float)
 # The notation [..., ...) means that the first value is part of all possible values, but the second one is not.
 #   random.random() will at most produce values very close to 1.0." - Martijn Pieters♦, edited by wim
 
+
 # From: https://stackoverflow.com/questions/58241868/can-random-uniform0-1-ever-generate-0-or-1
 
 # in theory, our random.uniform(50, 70) example, could produce 50, but due to the rules of .random(), we will never
@@ -54,7 +55,7 @@ print(random.choice(num_list))
 # will randomly choose one element from the provided list.
 
 # reference: The Programming Portal channel, YouTube, "Random number generator in Python," video. -> (TPP)
-# From https://www.youtube.com/watch?v=CasqhmeopnU
+#   From https://www.youtube.com/watch?v=CasqhmeopnU
 
 # so... i looked into RNG a little.
 
@@ -70,9 +71,8 @@ random.seed(a=None, version=2)
 #   If you pass a seed value in the form of an integer, it is used as it is. (pynative)"
 
 
-
 # reference: From https://pynative.com/python-random-seed/ -> (pynative)
-# i know bibliographies belong on the very bottom, but it's easier to read, this way.
+#   i know bibliographies belong on the very bottom, but readabilty is more coercive this way.
 
 # i looked up os.urandom() as "deterministic," on Google, and stackoverflow gave me this, as the top answer.
 
@@ -85,6 +85,7 @@ random.seed(a=None, version=2)
 #   it more random.
 # True random is something else yet and you'd need a physical source of randomness like something that measures atomic
 #   decay; that is truly random in the physical sense, but usually overkill for most applications." - deceze♦
+
 
 # From https://stackoverflow.com/questions/47514695/whats-the-difference-between-os-urandom-and-random#:~:text=urandom%20on%20the%20other%20hand,sources%2C%20making%20it%20more%20random.
 
@@ -104,6 +105,7 @@ random.seed(a=None, version=2)
 #   to verify.
 # So while it's truly random, designing methods to extract the entropy from such sources is not necessarily intuitive
 #   or easy. - Luc
+
 
 # From https://crypto.stackexchange.com/questions/39186/what-does-it-mean-for-a-random-number-generator-to-be-cryptographically-secure/39188#39188
 
@@ -260,3 +262,13 @@ print("Reshuffled list ", numbers)
 # followed by, -> Shuffled list [40, 60, 50, 10, 30, 20]
 # then, -> Reshuffled list [40, 60, 50, 10, 30, 20]
 # Shuffled list and Reshuffled list are the same output, because the seed is consistent.
+
+# reference: From https://pynative.com/python-random-seed/ -> (pynative)
+
+# following, once more, from order of appearance:
+
+# reference: The Programming Portal channel, YouTube, "Random number generator in Python," video. -> (TPP)
+#   From https://www.youtube.com/watch?v=CasqhmeopnU
+# reference: https://stackoverflow.com/questions/58241868/can-random-uniform0-1-ever-generate-0-or-1
+# reference: https://stackoverflow.com/questions/47514695/whats-the-difference-between-os-urandom-and-random#:~:text=urandom%20on%20the%20other%20hand,sources%2C%20making%20it%20more%20random.
+# reference: https://crypto.stackexchange.com/questions/39186/what-does-it-mean-for-a-random-number-generator-to-be-cryptographically-secure/39188#39188
