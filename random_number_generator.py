@@ -335,15 +335,3 @@ for i in trundle:
     # 8 = 'c'
     # 9 = 'm'
     print(i, end=",")
-
-ergo = {}
-
-def until(here):
-    for count in range(len(trundle)):
-        if count != 0:
-            ergo["count:"] = count
-    print(ergo)
-#     else:
-#         print ('where to, from here?: ', ergo)
-
-# until(1)

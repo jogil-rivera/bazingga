@@ -57,44 +57,26 @@ def whatis(z):
     # y needs a new seed, val is already assigned to rr(sys.maxsize)
     y = random.uniform(1,1000)
     # b/c floats are the scary ones
-    print('"a thick number": ', y)
-    print('those two, from earlier, added together: ', x[0] + x[1])
-    print('that summation, multiplied by, "a thick number": ', (x[0] + x[1]) * y)
+    # print('"a thick number": ', y)
+    # print('those two, from earlier, added together: ', x[0] + x[1])
+    # print('that summation, multiplied by, "a thick number": ', (x[0] + x[1]) * y)
     zed = int(((x[0]+ x[1]) * y))
     return int(zed)
 
 zed = whatis(0)
 
+print('the int: ', zed)
 trundle = str(zed)
 
-print(trundle)
+print('the str: ', trundle)
 
+maokai = {}
+cr = []
 for i in trundle:
     sh = int(i)
-    maokai = []
-    maokai.append(trundle[sh])
-    # 0 = 's'
-    # 1 = 'r'
-    # 2 ='t'
-    # 3 = 'g'
-    # 4 = 'a'
-    # 5 = 'e'
-    # 6 = 'y'
-    # 7 = 'i'
-    # 8 = 'c'
-    # 9 = 'm'
-print(sh, end= ",")
-print(maokai)
+    maokai.setdefault('_', [])
+    maokai['_'].append(sh)
 
-
-ergo = {}
-
-# def until(here):
-#     for i in trundle:
-#         for count in range(len(trundle)):
-#             ergo[count] = i
-#     print(ergo)
-# #     else:
-# #         print ('where to, from here?: ', ergo)
-#
-# until(1)
+cr = [_ for _ in maokai.values()]
+print(cr)
+# print(maokai)
