@@ -18,5 +18,3 @@
 #     # print(values)
 #
 # window.close()
-
-# u witnessed nada.
