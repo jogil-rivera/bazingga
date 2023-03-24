@@ -108,4 +108,44 @@ def steps_factorial(n):
 print(steps_factorial(num))
 # (real)
 
+# a factorial(), without the use of recursion.
+def factorial(n):
+    return_value = 1
+    for i in range(2, n + 1):
+        return_value *= i
+    return return_value
 
+print('for loop:', factorial(num))
+
+# a factorial, using reduce() lambda.
+
+from functools import reduce
+def factorial(n):
+    return reduce(lambda x, y: x * y, range(1, n + 1) or [1])
+
+print('reduce:', factorial(num))
+
+# breaking off, into lambda introductions.
+
+# "the lambda keyword is used to define an anonymous function in Python." (geek)
+# "You need to keep in your knowledge that lambda functions are syntactically restricted to a single expression." (geek)
+
+str1 = 'GeeksforGeeks'
+
+# lambda returns a function object
+rev_upper = lambda string: string.upper()[::-1]
+print(rev_upper(str1))
+# (geek)
+# converted str1, 'GeeksforGeeks', to it's upper-case and reversed it.
+
+# we can check conditions, with the lambda function
+
+format_numeric = lambda num: f"{num:e}" if isinstance(num, int) else f"{num:,.2f}"
+
+print("Int formatting:", format_numeric(1000000))
+print("float formatting:", format_numeric(999999.789541235))
+# (geek)
+#
+
+# reference: geeksforgeeks.org -> (geek)
+# From https://www.geeksforgeeks.org/python-lambda-anonymous-functions-filter-map-reduce/
